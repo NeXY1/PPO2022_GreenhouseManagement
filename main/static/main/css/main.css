@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+body {
+    background: rgb(192,234,162);
+    background: linear-gradient(180deg, rgba(192,234,162,1) 0%, rgba(91,251,201,1) 100%);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.additional_data {
+    overflow: hidden;
+    float: right;
+    min-height: 100vh;
+    width: 900px;
+    padding: 25px;
+    border: 1px solid rgba(233, 233, 233, 0.568);
+    border-bottom-left-radius: 60px;
+    border-top-left-radius: 60px;
+    background: rgba(179, 179, 179, 0.404);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    left: 1020px;
+}
+
+.additional_data_g_main {
+    overflow: hidden;
+    float: none;
+    height: 610px; 
+    width: 850px;
+    padding: 20px;
+    border: 1px solid rgba(233, 233, 233, 0.568);
+    border-radius: 30px;
+    background: rgba(161, 161, 161, 0.384);
+    backdrop-filter: blur(10px);
+}
+
+.additional_data_t_main {
+    overflow: hidden;
+    position: relative;
+    float: none;
+    height: 243px; 
+    width: 850px;
+    padding: 0px;
+    border: 1px solid rgba(233, 233, 233, 0.568);
+    border-radius: 30px;
+    background: rgba(158, 158, 158, 0.384);
+    top: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.adata_g1_main, .adata_g2_main, .adata_g3_main, .adata_g4_main {
+    overflow: hidden;
+    position: relative;
+    height: 275px;
+    width: 395px;
+    background: #ffffff;
+    padding: 0px;
+    border: 1px solid #c4c4c4;;
+    border-radius: 20px;
+}
+
+.adata_g1_main, .adata_g3_main {
+    float: left;
+}
+
+.adata_g2_main, .adata_g4_main {
+    float: right;
+}
+
+.adata_g3_main, .adata_g4_main {
+    top: 20px;
+}
+
+.header {
+    position: absolute;
+    top: 5px;
+    left: 230px;
+    float: left;
+    color: rgb(99, 99, 99);
+    font-family: 'Nunito', sans-serif;
+    font-size: 40pt;
+}
+
+.sensors {
+    overflow: hidden;
+    position: absolute;
+    float: left;
+    height: 200px;
+    width: 850px;
+    padding: 0px;
+    border: 4px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    top: 100px;
+    left: 50px;
+}
+
+.sensors_text, .controls_text {
+    position: relative;
+    float: left;
+    top: 0px;
+    left: 10px;
+    color: rgb(99, 99, 99);
+    font-family: 'Nunito', sans-serif;
+    font-size: 25pt;
+}
+
+.d1_now, .d2_now {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    height: 300px;
+    width: 450px;
+    padding: 0px;
+    border: 1px solid rgba(233, 233, 233, 0.568);
+    border-radius: 30px;
+    top: 155px;
+    left: 70px;
+    background: rgba(158, 158, 158, 0.384);
+    backdrop-filter: blur(10px);
+}
+
+.d2_now {
+    left: 80px;
+}
+
+.d3_now {
+    overflow: hidden;
+    position: absolute;
+    float: none;
+    height: 200px;
+    width: 910px;
+    padding: 0px;
+    border: 1px solid rgba(233, 233, 233, 0.568);
+    border-radius: 30px;
+    background: rgba(158, 158, 158, 0.384);
+    backdrop-filter: blur(10px);
+    top: 465px;
+    left: 70px;
+}
+
+.controls {
+    overflow: hidden;
+    position: fixed;
+    float: left;
+    height: 150px;
+    width: 850px;
+    padding: 0px;
+    border: 4px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    top: 690px;
+    left: 50px;
+}
+
+.vents_control, .humidification_control, .grooves_control{
+    overflow: hidden;
+    position: absolute;
+    float: left;
+    height: 160px;
+    width: 225px;
+    padding: 0px;
+    border: 1px solid rgba(233, 233, 233, 0.568);
+    border-radius: 30px;
+    top: 745px;
+    left: 70px;
+    background: rgba(158, 158, 158, 0.384);
+    backdrop-filter: blur(10px);
+}
+
+.humidification_control {
+    left: 305px;
+}
+
+.grooves_control {
+    left: 540px;
+    width: 440px;
+}
