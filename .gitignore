@@ -1,2 +1,10 @@
-GreenhouseManagement/settings.py
-__pycache__
+# Cache
+GreenhouseManagement/__pycache__
+*.pyc
+
+#Security
+.env
+
+#Other
+*.log
+*.pot
