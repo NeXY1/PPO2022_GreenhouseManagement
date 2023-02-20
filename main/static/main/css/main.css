@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
 body {
     background: rgb(192,234,162);
@@ -9,7 +11,23 @@ body {
     overflow: hidden;
 }
 
-.additional_data {
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+.opt-btn, .emc-btn {
+    opacity: 0.5;
+}
+
+.opt-btn:hover, .emc-btn:hover {
+    opacity: 1;
+}
+
+.additional-data {
     overflow: hidden;
     float: right;
     min-height: 100vh;
@@ -24,7 +42,7 @@ body {
     left: 1020px;
 }
 
-.additional_data_g_main {
+.additional-data-g-main {
     overflow: hidden;
     float: none;
     height: 610px; 
@@ -36,7 +54,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.additional_data_t_main {
+.additional-data-t-main {
     overflow: hidden;
     position: relative;
     float: none;
@@ -50,7 +68,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.adata_g1_main, .adata_g2_main, .adata_g3_main, .adata_g4_main {
+.adata-g1-main, .adata-g2-main, .adata-g3-main, .adata-g4-main {
     overflow: hidden;
     position: relative;
     height: 275px;
@@ -61,21 +79,21 @@ body {
     border-radius: 20px;
 }
 
-.adata_g1_main, .adata_g3_main {
+.adata-g1-main, .adata-g3-main {
     float: left;
 }
 
-.adata_g2_main, .adata_g4_main {
+.adata-g2-main, .adata-g4-main {
     float: right;
 }
 
-.adata_g3_main, .adata_g4_main {
+.adata-g3-main, .adata-g4-main {
     top: 20px;
 }
 
 .header {
     position: absolute;
-    top: 5px;
+    top: 3px;
     left: 230px;
     float: left;
     color: rgb(99, 99, 99);
@@ -96,7 +114,7 @@ body {
     left: 50px;
 }
 
-.sensors_text, .controls_text {
+.sensors-text, .controls-text {
     position: relative;
     float: left;
     top: 0px;
@@ -106,14 +124,14 @@ body {
     font-size: 25pt;
 }
 
-.d1_now, .d2_now {
+.d1-now, .d2-now {
     overflow: hidden;
     position: relative;
     float: left;
     height: 300px;
     width: 450px;
     padding: 0px;
-    border: 1px solid rgba(233, 233, 233, 0.568);
+    border: 3px solid rgba(233, 233, 233, 0.568);
     border-radius: 30px;
     top: 155px;
     left: 70px;
@@ -121,18 +139,18 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.d2_now {
+.d2-now {
     left: 80px;
 }
 
-.d3_now {
+.d3-now {
     overflow: hidden;
     position: absolute;
     float: none;
     height: 200px;
     width: 910px;
     padding: 0px;
-    border: 1px solid rgba(233, 233, 233, 0.568);
+    border: 3px solid rgba(233, 233, 233, 0.568);
     border-radius: 30px;
     background: rgba(158, 158, 158, 0.384);
     backdrop-filter: blur(10px);
@@ -153,7 +171,7 @@ body {
     left: 50px;
 }
 
-.vents_control, .humidification_control, .grooves_control{
+.vents-control, .humidification-control, .grooves-control{
     overflow: hidden;
     position: absolute;
     float: left;
@@ -168,11 +186,241 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.humidification_control {
+.humidification-control {
     left: 305px;
 }
 
-.grooves_control {
+.grooves-control {
     left: 540px;
     width: 440px;
+}
+
+.options-panel {
+    position: absolute;
+    float: none;
+    top: 20px;
+    left: 20px;
+}
+
+.vents-btn {
+    position: absolute;
+    top: 80px;
+    left: 26px;
+}
+
+.humidification-btn {
+    position: absolute;
+    top: 80px;
+    left: 28px;
+}
+
+#humidification-text1, #humidification-text0, #vents-text1, #vents-text0 {
+    font-size: 25px;
+}
+
+.vents-ctrl-text, .humidification-ctrl-text, .grooves-ctrl-text {
+    position: absolute;
+    float: none;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(95, 95, 95);
+}
+
+.vents-ctrl-text {
+    top: 20px;
+    left: 25px;
+    font-size: 30px;
+}
+
+.vents-btn:hover {
+    background-color: rgba(231, 231, 231, 0.253);
+}
+
+.humidification-ctrl-text {
+    top: 23px;
+    left: 20px;
+    font-size: 28px;
+}
+
+.humidification-btn:hover {
+    background-color: rgba(231, 231, 231, 0.253);
+}
+
+.grooves-ctrl-text {
+    top: 20px;
+    left: 112px;
+    font-size: 30px;
+}
+
+.grooves-btn-all {
+    position: relative;
+    top: 70px;
+    left: 27px;
+    width: 60px;
+}
+
+.grooves-btn-all:hover {
+    background-color: rgba(231, 231, 231, 0.253);
+}
+
+.d1-now-text, .d2-now-text {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(100, 100, 100);
+    top: 12px;
+    left: 20px;
+    font-size: 32px;
+}
+
+.d1-mode-btn, .d2-mode-btn {
+    position: absolute;
+    float: right;
+    top: 20px;
+    right: 20px;
+}
+
+.d1-in-all-now, .d2-in-all-now {
+    overflow: hidden;
+    position: absolute;
+    height: 215px;
+    width: 135px;
+    background: rgb(146, 146, 146);
+    padding: 0px;
+    border: 0px solid #c4c4c4;;
+    border-radius: 20px;
+    bottom: 15px;
+    left: 15px;
+}
+
+.d1-now-s, .d2-now-s, .d3-now-s {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    color: #ffffff;
+    left: 15px;
+}
+
+.d1-now-s1, .d2-now-s1 {
+    top: 15px;
+    left: 17px;
+}
+
+.d1-now-s2, .d2-now-s2 {
+    top: 65px;
+}
+
+.d1-now-s3, .d2-now-s3 {
+    top: 115px;
+}
+
+.d1-now-s4, .d2-now-s4 {
+    top: 165px;
+}
+
+.d3-now-s {
+    left: 20px;
+    font-size: 35px;
+}
+
+.d3-now-s1, .d3-now-s4 {
+    top: 5px;
+}
+
+.d3-now-s2, .d3-now-s5 {
+    top: 58px;
+}
+
+.d3-now-s3, .d3-now-s6 {
+    top: 110px;
+}
+
+.d1-now-avg, .d2-now-avg {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    font-size: 85px;
+    color: #ffffff;
+    right: 50px;
+    top: 100px;
+}
+
+.d1-now-avg-t, .d2-now-avg-t {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: #ffffffa8;
+    right: 50px;
+    top: 200px;
+}
+
+.d3-now-text {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(100, 100, 100);
+    top: 12px;
+    left: 295px;
+    font-size: 32px;
+}
+
+.d3-1-in-all-now, .d3-2-in-all-now {
+    overflow: hidden;
+    position: absolute;
+    height: 164px;
+    width: 170px;
+    background: rgb(146, 146, 146);
+    padding: 0px;
+    border: 0px solid #c4c4c4;;
+    border-radius: 20px;
+    bottom: 15px;
+}
+
+.d3-1-in-all-now {
+    left: 15px;
+}
+
+.d3-2-in-all-now {
+    right: 15px;
+}
+
+.d3-now-avg-t {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: #ffffffa8;
+    right: 353px;
+    top: 150px;
+}
+
+.d3-now-avg {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    font-size: 85px;
+    color: #ffffff;
+    right: 368px;
+    top: 50px;
+}
+
+.table-text {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(100, 100, 100);
+    top: 7px;
+    left: 258px;
+    font-size: 32px;
+}
+
+.tt {
+    position: absolute;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(100, 100, 100);
+    font-size: 21px;
+    top: 65px;
+    left: 45px;
 }

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {% block title %}{% endblock %} </title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
@@ -16,29 +17,198 @@
         Панель управления
     </div>
 
-    <div class="sensors">
-        <span class="sensors_text">Показания датчиков</span>
+    <div class="options-panel">
+        <button type="button" class="btn btn-secondary opt-btn">
+            <span class="material-symbols-outlined">
+                settings
+            </span></button>
+        </button>
+        
+        <button type="button" class="btn btn-secondary emc-btn">
+            <span class="material-symbols-outlined">
+                crisis_alert
+            </span>
+        </button>
     </div>
-    <div class='d1_now'></div>
-    <div class='d2_now'></div>
-    <div class='d3_now'></div>
+
+    <div class="sensors">
+        <span class="sensors-text">Показания датчиков</span>
+    </div>
+
+    <div class='d1-now'>
+        <span class="d1-now-text">Температура</span>
+
+        <div class="btn-group d1-mode-btn" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check left-btn" name="btnradio20" id="btnradio20" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="btnradio20" id="d1-btn-text20">&#176;C</label>
+            
+            <input type="radio" class="btn-check right-btn" name="btnradio20" id="btnradio21" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btnradio21" id="d1-btn-text21">&#176;F</label>
+        </div>
+
+        <div class="d1-in-all-now">
+            <span class="d1-now-s1 d1-now-s">1 - 22&#176;C</span>
+            <span class="d1-now-s2 d1-now-s">2 - 22&#176;C</span>
+            <span class="d1-now-s3 d1-now-s">3 - 22&#176;C</span>
+            <span class="d1-now-s4 d1-now-s">4 - 22&#176;C</span>
+        </div>
+
+        <span class="d1-now-avg">22&#176;C</span>
+        <span class="d1-now-avg-t">Среднее значение</span>
+    </div>
+
+    <div class='d2-now'>
+        <span class="d2-now-text">Влажность воздуха</span>
+
+        <div class="btn-group d2-mode-btn" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check left-btn" name="btnradio22" id="btnradio22" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="btnradio22" id="d2-btn-text22">%</label>
+        </div>
+
+        <div class="d2-in-all-now">
+            <span class="d2-now-s1 d2-now-s">1 - 40%</span>
+            <span class="d2-now-s2 d2-now-s">2 - 40%</span>
+            <span class="d2-now-s3 d2-now-s">3 - 40%</span>
+            <span class="d2-now-s4 d2-now-s">4 - 40%</span>
+        </div>
+
+        <span class="d2-now-avg">40%</span>
+        <span class="d2-now-avg-t">Среднее значение</span>
+    </div>
+
+    <div class='d3-now'>
+        <span class="d3-now-text">Влажность почвы</span>
+        
+        <div class="d3-1-in-all-now">
+            <span class="d3-now-s1 d3-now-s">1 - 65%</span>
+            <span class="d3-now-s2 d3-now-s">2 - 65%</span>
+            <span class="d3-now-s3 d3-now-s">3 - 65%</span>
+        </div>
+
+        <div class="d3-2-in-all-now">
+            <span class="d3-now-s4 d3-now-s">4 - 65%</span>
+            <span class="d3-now-s5 d3-now-s">5 - 65%</span>
+            <span class="d3-now-s6 d3-now-s">6 - 65%</span>
+        </div>
+
+        <span class="d3-now-avg">65%</span>
+        <span class="d3-now-avg-t">Среднее значение</span>
+    </div>
 
     <div class="controls">
-        <span class="controls_text">Управление</span>
+        <span class="controls-text">Управление</span>
     </div>
-    <div class="vents_control"></div>
-    <div class="humidification_control"></div>
-    <div class="grooves_control"></div>
 
-    <div class="additional_data">
-        <div class="additional_data_g_main">
-            <div class="adata_g1_main"></div>
-            <div class="adata_g2_main"></div>
-            <div class="adata_g3_main"></div>
-            <div class="adata_g4_main"></div>
+    <div class="vents-control">
+        <span class="vents-ctrl-text">Форточки</span>
+        <div class="btn-group vents-btn" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check left-btn" name="btnradio0" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="btnradio1" id="vents-text0">ОТКР</label>
+            
+            <input type="radio" class="btn-check right-btn" name="btnradio0" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btnradio2" id="vents-text1">ЗАКР</label>
         </div>
-        <div class="additional_data_t_main">
+    </div>
 
+    <div class="humidification-control">
+        <span class="humidification-ctrl-text">Увлажнение</span>
+        <div class="btn-group humidification-btn" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check left-btn" name="btnradio1" id="btnradio3" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="btnradio3" id="humidification-text0">ВКЛ </label>
+            
+            <input type="radio" class="btn-check right-btn" name="btnradio1" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btnradio4" id="humidification-text1">ВЫКЛ</label>
+        </div>
+    </div>
+
+    <div class="grooves-control">
+        <span class="grooves-ctrl-text">Бороздки (1-6)</span>
+        <div class="btn-group-vertical grooves-btn-all" role="group" aria-label="Vertical radio toggle button group" id="grooves-btn1">
+            <input type="radio" class="btn-check" name="vbtn-radio1" id="vbtn-radio1" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="vbtn-radio1">ОТКР</label>
+            <input type="radio" class="btn-check" name="vbtn-radio1" id="vbtn-radio2" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="vbtn-radio2">ЗАКР</label>
+        </div>
+
+        <div class="btn-group-vertical grooves-btn-all" role="group" aria-label="Vertical radio toggle button group" id="grooves-btn2">
+            <input type="radio" class="btn-check" name="vbtn-radio2" id="vbtn-radio3" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="vbtn-radio3">ОТКР</label>
+            <input type="radio" class="btn-check" name="vbtn-radio2" id="vbtn-radio4" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="vbtn-radio4">ЗАКР</label>
+        </div>
+
+        <div class="btn-group-vertical grooves-btn-all" role="group" aria-label="Vertical radio toggle button group" id="grooves-btn3">
+            <input type="radio" class="btn-check" name="vbtn-radio3" id="vbtn-radio5" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="vbtn-radio5">ОТКР</label>
+            <input type="radio" class="btn-check" name="vbtn-radio3" id="vbtn-radio6" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="vbtn-radio6">ЗАКР</label>
+        </div>
+
+        <div class="btn-group-vertical grooves-btn-all" role="group" aria-label="Vertical radio toggle button group" id="grooves-btn4">
+            <input type="radio" class="btn-check" name="vbtn-radio4" id="vbtn-radio7" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="vbtn-radio7">ОТКР</label>
+            <input type="radio" class="btn-check" name="vbtn-radio4" id="vbtn-radio8" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="vbtn-radio8">ЗАКР</label>
+        </div>
+
+        <div class="btn-group-vertical grooves-btn-all" role="group" aria-label="Vertical radio toggle button group" id="grooves-btn5">
+            <input type="radio" class="btn-check" name="vbtn-radio5" id="vbtn-radio9" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="vbtn-radio9">ОТКР</label>
+            <input type="radio" class="btn-check" name="vbtn-radio5" id="vbtn-radio10" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="vbtn-radio10">ЗАКР</label>
+        </div>
+
+        <div class="btn-group-vertical grooves-btn-all" role="group" aria-label="Vertical radio toggle button group" id="grooves-btn6">
+            <input type="radio" class="btn-check" name="vbtn-radio6" id="vbtn-radio11" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="vbtn-radio11">ОТКР</label>
+            <input type="radio" class="btn-check" name="vbtn-radio6" id="vbtn-radio12" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="vbtn-radio12">ЗАКР</label>
+        </div>
+    </div>
+
+    <div class="additional-data">
+        <div class="additional-data-g-main">
+            <div class="adata-g1-main"></div>
+            <div class="adata-g2-main"></div>
+            <div class="adata-g3-main"></div>
+            <div class="adata-g4-main"></div>
+        </div>
+
+        <div class="additional-data-t-main">
+            <span class="table-text">Журнал показаний</span>
+
+            <table class="tt">
+                <tr class="tt1">
+                    <td id="tt1-date">19.02.2023 ---</td>
+                    <td id="tt1-temp">Ср. темп. 22&#176;C ---</td>
+                    <td id="tt1-airhum">Ср. вл. возд. 45% ---</td>
+                    <td id="tt1-hum">Ср. вл. почвы 65%</td>
+                </tr>
+                <tr class="tt2">
+                    <td id="tt2-date">19.02.2023 ---</td>
+                    <td id="tt2-temp">Ср. темп. 22&#176;C ---</td>
+                    <td id="tt2-airhum">Ср. вл. возд. 45% ---</td>
+                    <td id="tt2-hum">Ср. вл. почвы 65%</td>
+                </tr>
+                <tr class="tt3">
+                    <td id="tt3-date">19.02.2023 ---</td>
+                    <td id="tt3-temp">Ср. темп. 22&#176;C ---</td>
+                    <td id="tt3-airhum">Ср. вл. возд. 45% ---</td>
+                    <td id="tt3-hum">Ср. вл. почвы 65%</td>
+                </tr>
+                <tr class="tt4">
+                    <td id="tt4-date">19.02.2023 ---</td>
+                    <td id="tt4-temp">Ср. темп. 22&#176;C ---</td>
+                    <td id="tt4-airhum">Ср. вл. возд. 45% ---</td>
+                    <td id="tt4-hum">Ср. вл. почвы 65%</td>
+                </tr>
+                <tr class="tt5">
+                    <td id="tt5-date">19.02.2023 ---</td>
+                    <td id="tt5-temp">Ср. темп. 22&#176;C ---</td>
+                    <td id="tt5-airhum">Ср. вл. возд. 45% ---</td>
+                    <td id="tt5-hum">Ср. вл. почвы 65%</td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
