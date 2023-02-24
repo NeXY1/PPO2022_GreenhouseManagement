@@ -8,6 +8,7 @@ load_dotenv(dotenv_path)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Create .env file and insert there your secret key
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = True
@@ -57,10 +58,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'GreenhouseManagement.wsgi.application'
 
+# Insert your DB information below
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'GreenhouseManagementDB',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
